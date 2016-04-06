@@ -2390,7 +2390,9 @@
 
 			this.eachBars(function(bar){
 				bar.save();
-				bar.errorBar.save();
+				if (bar.errorBar) {
+					bar.errorBar.save();
+				}
 			});
 			this.render();
 		},
